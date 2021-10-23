@@ -18,10 +18,10 @@ let userArray = [];
 uppercaseArray [1]
 //props before getting a password of the follow questions
   let numCharacter = prompt ("How much number of Character you want between 8 and 128?");
-  let numbers = confirm ("you want numbers in your password?");
-  let uppercases = confirm ("you want Uppercases in your password?");
-  let lowercases = confirm ("you want lowercases in your password?");
-  let characters = confirm ("you want special characters in your password?");
+  let numbers = confirm ("You want numbers in your password?");
+  let uppercases = confirm ("You want Uppercases in your password?");
+  let lowercases = confirm ("You want lowercases in your password?");
+  let characters = confirm ("You want special characters in your password?");
 
 // sequence of "if" statements for generating a password.
 
@@ -45,7 +45,7 @@ if (characters){
 }
 console.log(resultArray)
 
-//loop of the iteration
+//for loop
 for (let i = 0; i < numCharacter; i++) {
       
   userArray.push (resultArray[Math.floor(Math.random() * resultArray.length)]); 
