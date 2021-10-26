@@ -12,16 +12,29 @@ let characterArray = ["@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "="
 
 //empty array
  
-let resultArray = [];
+let resultArray = [8 > 128];
 let userArray = [];
 
 uppercaseArray [1]
 //props before getting a password of the follow questions
-  let numCharacter = prompt ("How much number of Character you want between 8 and 128?");
+  let numCharacter = prompt ("How much number of Characters you want between 8 and 128?");
   let numbers = confirm ("You want numbers in your password?");
-  let uppercases = confirm ("You want Uppercases in your password?");
-  let lowercases = confirm ("You want lowercases in your password?");
-  let characters = confirm ("You want special characters in your password?");
+  let upperCases = confirm ("You want Uppercases in your password?");
+  let lowerCases = confirm ("You want lowercases in your password?");
+  let characters = confirm ("You want Special Characters in your password?");
+
+  //if password length is at least 8 characters long. Prompts false
+  if (numCharacter < 8) {
+    alert('Password length must be at least 8 characters');
+    return null;
+  }
+
+  // if password length is less than 128 characters long. Prompts false
+  if (numCharacter > 128) {
+    alert('Password length must less than 128 characters');
+    return null;
+  }
+
 
 // sequence of "if" statements for generating a password.
 
@@ -30,12 +43,12 @@ if (numbers){
   
 }
 
-if (uppercases){
+if (upperCases){
   resultArray = resultArray.concat(uppercaseArray);
 
 }
 
-if (lowercases){
+if (lowerCases){
   resultArray = resultArray.concat(lowercaseArray);
 
 }
@@ -43,8 +56,8 @@ if (lowercases){
 if (characters){
   resultArray = resultArray.concat(characterArray);
 }
-console.log(resultArray)
 
+ 
 //for loop
 for (let i = 0; i < numCharacter; i++) {
       
